@@ -2,17 +2,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <BorderPane fx:controller="MasGUI.Controller"
-            xmlns:fx="http://javafx.com/fxml">
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="window"
+>
     <center>
-        <TextArea fx:id="output"
+        <TextArea fx:id="outputField"
                   BorderPane.alignment="CENTER"
-                  style="-fx-control-inner-background:#808080; -fx-font-family: Consolas; -fx-font- -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #00ff00; "
+                  style="-fx-control-inner-background:#808080; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #00ff00; "
         />
     </center>
     <bottom>
-        <TextField fx:id="input"
-                  BorderPane.alignment="CENTER"
-                  style="-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-font-size:14px; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #00ff00; "
+        <TextField fx:id="inputField"
+                   BorderPane.alignment="CENTER"
+                   style="-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-font-size:14px; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #00ff00; "
+                   onAction="#processCommand"
         />
     </bottom>
 </BorderPane>
